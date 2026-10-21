@@ -31,10 +31,11 @@ test('every service has non-empty fields, valid duration, and benefits list', ()
   }
 });
 
-test('createWhatsAppUrl correctly encodes message parameters', () => {
+test('createWhatsAppUrl correctly encodes message parameters and uses 64 99274-9005', () => {
   const msg = 'Olá, Nathalia! Gostaria de agendar.';
   const url = createWhatsAppUrl(msg);
-  assert.ok(url.startsWith(`https://wa.me/${WHATSAPP_PHONE}?text=`));
+  assert.equal(WHATSAPP_PHONE, '5564992749005');
+  assert.ok(url.startsWith(`https://wa.me/5564992749005?text=`));
   assert.ok(url.includes(encodeURIComponent(msg)));
 });
 

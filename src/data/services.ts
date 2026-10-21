@@ -109,8 +109,8 @@ export const servicesData: ServiceItem[] = [
   }
 ];
 
-export const WHATSAPP_PHONE = "5564984530700";
-export const PHONE_DISPLAY = "(64) 98453-0700";
+export const WHATSAPP_PHONE = "5564992749005";
+export const PHONE_DISPLAY = "(64) 99274-9005";
 
 export function createWhatsAppUrl(message: string): string {
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
