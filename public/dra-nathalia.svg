@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="50%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#134e4a" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcd5be" />
+      <stop offset="100%" stop-color="#f5b895" />
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d2314" />
+      <stop offset="50%" stop-color="#2a180d" />
+      <stop offset="100%" stop-color="#1a0e08" />
+    </linearGradient>
+    <linearGradient id="coatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="scrubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Clinic Glow -->
+  <rect width="600" height="800" fill="url(#bgGrad)" />
+  <circle cx="300" cy="280" r="260" fill="#2dd4bf" opacity="0.15" filter="url(#softGlow)" />
+  <circle cx="150" cy="180" r="180" fill="#ffffff" opacity="0.08" />
+
+  <!-- Back Hair -->
+  <path d="M 190 260 C 180 380, 170 520, 210 580 C 240 590, 360 590, 390 580 C 430 520, 420 380, 410 260 Z" fill="url(#hairGrad)" />
+
+  <!-- Shoulders & Upper Body (Lab coat) -->
+  <path d="M 120 800 L 140 560 C 160 500, 220 480, 260 480 L 340 480 C 380 480, 440 500, 460 560 L 480 800 Z" fill="url(#coatGrad)" />
+
+  <!-- Teal Scrub Top (V-neck underneath) -->
+  <polygon points="260,480 340,480 325,620 275,620" fill="url(#scrubGrad)" />
+  <polygon points="280,480 320,480 300,540" fill="#fcd5be" />
+
+  <!-- Lab Coat Lapels and Collar -->
+  <path d="M 230 480 L 275 620 L 255 800 L 170 800 L 170 550 Z" fill="#ffffff" />
+  <path d="M 370 480 L 325 620 L 345 800 L 430 800 L 430 550 Z" fill="#f8fafc" />
+  <path d="M 260 480 L 230 540 L 275 620 Z" fill="#f1f5f9" />
+  <path d="M 340 480 L 370 540 L 325 620 Z" fill="#e2e8f0" />
+
+  <!-- Stethoscope around Neck -->
+  <path d="M 240 470 C 230 560, 250 630, 280 660 C 290 670, 310 670, 320 660 C 350 630, 370 560, 360 470" fill="none" stroke="#334155" stroke-width="8" stroke-linecap="round" />
+  <circle cx="300" cy="670" r="14" fill="#0d9488" stroke="#ffffff" stroke-width="3" />
+  <circle cx="300" cy="670" r="6" fill="#f8fafc" />
+
+  <!-- Neck -->
+  <rect x="270" y="380" width="60" height="110" rx="20" fill="url(#skinGrad)" />
+  <path d="M 270 430 C 285 450, 315 450, 330 430 Z" fill="#e5a885" opacity="0.4" />
+
+  <!-- Head Base -->
+  <ellipse cx="300" cy="300" rx="95" ry="115" fill="url(#skinGrad)" />
+
+  <!-- Ears -->
+  <ellipse cx="205" cy="305" rx="14" ry="24" fill="#f5b895" />
+  <ellipse cx="395" cy="305" rx="14" ry="24" fill="#f5b895" />
+
+  <!-- Front Hair & Style -->
+  <path d="M 205 280 C 200 170, 280 130, 300 130 C 320 130, 400 170, 395 280 C 375 220, 340 200, 300 200 C 260 200, 225 220, 205 280 Z" fill="url(#hairGrad)" />
+  <path d="M 205 260 C 220 220, 260 210, 280 230 C 250 250, 220 290, 210 340 Z" fill="#2a180d" />
+  <path d="M 395 260 C 380 220, 340 210, 320 230 C 350 250, 380 290, 390 340 Z" fill="#2a180d" />
+
+  <!-- Eyebrows -->
+  <path d="M 240 260 C 255 252, 275 255, 280 262" fill="none" stroke="#2a180d" stroke-width="3.5" stroke-linecap="round" />
+  <path d="M 360 260 C 345 252, 325 255, 320 262" fill="none" stroke="#2a180d" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- Eyes with friendly, warm expression -->
+  <ellipse cx="260" cy="285" rx="14" ry="9" fill="#ffffff" />
+  <circle cx="261" cy="285" r="7" fill="#3b2314" />
+  <circle cx="263" cy="283" r="2.5" fill="#ffffff" />
+  <path d="M 246 283 C 253 275, 267 275, 274 283" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" />
+
+  <ellipse cx="340" cy="285" rx="14" ry="9" fill="#ffffff" />
+  <circle cx="339" cy="285" r="7" fill="#3b2314" />
+  <circle cx="341" cy="283" r="2.5" fill="#ffffff" />
+  <path d="M 326 283 C 333 275, 347 275, 354 283" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Nose -->
+  <path d="M 300 280 L 297 325 C 295 332, 305 334, 308 329" fill="none" stroke="#d99370" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Natural, Warm Smile -->
+  <path d="M 275 352 C 285 375, 315 375, 325 352" fill="#ffffff" stroke="#c26356" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 270 350 C 285 368, 315 368, 330 350" fill="none" stroke="#b45346" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Rosy Cheeks -->
+  <circle cx="235" cy="320" r="18" fill="#f472b6" opacity="0.18" filter="url(#softGlow)" />
+  <circle cx="365" cy="320" r="18" fill="#f472b6" opacity="0.18" filter="url(#softGlow)" />
+
+  <!-- Doctor Coat Pocket with Pens & Caduceus pin -->
+  <rect x="370" y="600" width="55" height="65" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" />
+  <line x1="385" y1="585" x2="385" y2="600" stroke="#0d9488" stroke-width="4" stroke-linecap="round" />
+  <line x1="395" y1="580" x2="395" y2="600" stroke="#0284c7" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Name Badge on Lab Coat -->
+  <rect x="180" y="600" width="70" height="35" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+  <rect x="186" y="605" width="20" height="2" fill="#0d9488" />
+  <text x="186" y="618" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#0f172a">Dra. Nathalia</text>
+  <text x="186" y="628" font-family="Arial, sans-serif" font-size="6.5" font-weight="bold" fill="#0d9488">FISIOTERAPIA</text>
+</svg>

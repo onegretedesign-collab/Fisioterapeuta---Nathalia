@@ -1,0 +1,6 @@
+{
+  "name": "Dra. Nathalia Guimarães Nolêto - Fisioterapia",
+  "description": "Fisioterapia clínica e terapias integrativas. Reabilitação funcional, pós-cirúrgicos, alívio de dor e planos estruturados com contrato.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
