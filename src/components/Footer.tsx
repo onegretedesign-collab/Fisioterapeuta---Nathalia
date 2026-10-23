@@ -15,8 +15,12 @@ export const Footer: React.FC = () => {
           {/* Identificação */}
           <div className="space-y-3">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white">
-                <i className="fa-solid fa-hands-holding"></i>
+              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md shrink-0 border border-slate-700/60 bg-emerald-950">
+                <img 
+                  src="/images/favicon-site-nathalia.png" 
+                  alt="Logo Nathalia Guimarães Nolêto" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <p className="text-white font-bold">Nathalia Guimarães Nolêto</p>

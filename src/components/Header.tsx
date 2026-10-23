@@ -11,18 +11,14 @@ export const Header: React.FC = () => {
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logotipo / Nome */}
-          <a href="#" className="flex items-center gap-2.5 sm:gap-3 group min-w-0 pr-2">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300 shrink-0">
-              <i className="fa-solid fa-hands-holding text-lg sm:xl"></i>
-            </div>
-            <div className="min-w-0">
-              <span className="block text-xs sm:text-base md:text-lg font-bold tracking-tight text-slate-900 group-hover:text-brand-700 transition-colors leading-tight">
-                Nathalia Guimarães Nolêto
-              </span>
-              <span className="block text-[10px] sm:text-xs font-semibold text-brand-600 uppercase tracking-wider leading-tight">
-                Fisioterapia & Terapias Integrativas
-              </span>
+          {/* Logotipo / Favicon */}
+          <a href="#" className="flex items-center group min-w-0" aria-label="Nathalia Guimarães Nolêto - Fisioterapia">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0 border border-slate-200/60 bg-emerald-950">
+              <img 
+                src="/images/favicon-site-nathalia.png" 
+                alt="Logo Nathalia Guimarães Nolêto" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </a>
 

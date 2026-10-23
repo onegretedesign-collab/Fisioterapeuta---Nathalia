@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { createWhatsAppUrl, PHONE_DISPLAY } from '../data/services.ts';
+import { createWhatsAppUrl } from '../data/services.ts';
 
 export const Hero: React.FC = () => {
   const heroWhatsAppUrl = createWhatsAppUrl(
@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
   return (
     <section className="relative overflow-hidden min-h-[90vh] lg:min-h-[95vh] flex items-center justify-center bg-white text-white">
       
-      {/* 1. Background Video Layer - Sem margens amostras e deslocado 5% para baixo para não cortar a cabeça */}
+      {/* 1. Background Video Layer - Sem margens amostras e com enquadramento justo */}
       <div className="absolute inset-0 z-0 overflow-hidden select-none pointer-events-none">
         <video
           ref={videoRef}
@@ -80,24 +80,27 @@ export const Hero: React.FC = () => {
           {/* Vídeo oficial enquadrado 1920x1080 (H.264 FastStart) */}
           <source src="/videos/banner-nathalia.mp4" type="video/mp4" />
           {/* Fallback de streaming direto do Google Drive */}
-          <source src="https://drive.google.com/uc?export=download&id=14mMf8VOpGNqjnm5n3EIXGxt5wES-k8CK" type="video/mp4" />
+          <source src="https://drive.google.com/uc?export=download&id=17XV2tvHikiXMk9JS-YykAnL2jZtXg2Hm" type="video/mp4" />
         </video>
 
         {/* Fundo com 0% para o vídeo aparecer 100% limpo e vívido (sem sobreposição escurecida) */}
         <div className="absolute inset-0 bg-transparent pointer-events-none" />
       </div>
 
-      {/* 2. Textos externos mantidos como estão sobre o vídeo, com alto contraste e nitidez */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 sm:py-24 w-full">
-        <div className="max-w-3xl space-y-6 text-left">
+      {/* 2. Textos externos posicionados e descidos sobre o vídeo */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 sm:pt-28 lg:pt-32 pb-14 w-full flex flex-col justify-center min-h-[90vh] lg:min-h-[95vh]">
+        <div className="max-w-3xl lg:max-w-4xl space-y-5 sm:space-y-6 text-left">
           
-          {/* Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-950/70 border border-white/20 text-emerald-300 text-xs font-extrabold uppercase tracking-wider backdrop-blur-md shadow-xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-            <i className="fa-solid fa-sparkles text-emerald-400"></i>
-            Atendimento Personalizado e Humanizado
+          {/* Logo clara posicionada acima da frase Reabilitação funcional */}
+          <div className="pb-1">
+            <img 
+              src="/images/logo-fisiotherapy-claro.png" 
+              alt="FISIOTERAPY - Prevenção e Tratamento da Dor"
+              className="w-[360px] max-w-[90vw] sm:w-[460px] lg:w-[525px] h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)] filter"
+            />
           </div>
 
-          {/* Headline com a quebra solicitada e sombra de alta legibilidade sobre o vídeo 0% */}
+          {/* Headline com quebra exata e sombra para alto contraste */}
           <h1 className="text-[30px] sm:text-4xl lg:text-[46px] xl:text-5xl font-extrabold text-white tracking-tight leading-[1.18] drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)]">
             <span className="block text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
               Reabilitação funcional,
@@ -115,13 +118,13 @@ export const Hero: React.FC = () => {
             Tratamentos especializados focados na sua recuperação completa. Do pós-cirúrgico e acidentes de trabalho a técnicas integrativas como Dry Needling e Auriculoterapia.
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-start gap-4 pt-2">
+          {/* CTAs descidos abaixo com tamanho aumentado em 3% */}
+          <div className="flex flex-col sm:flex-row items-center justify-start gap-4 pt-3">
             <a 
               href={heroWhatsAppUrl} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-base shadow-2xl shadow-emerald-500/30 hover:scale-[1.02] transition-all duration-200 cursor-pointer drop-shadow-md"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8.5 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-[16.5px] scale-[1.03] origin-left shadow-2xl shadow-emerald-500/30 hover:scale-[1.05] transition-all duration-200 cursor-pointer drop-shadow-md"
             >
               <i className="fa-brands fa-whatsapp text-2xl text-slate-950"></i>
               <span>Agende Já no WhatsApp</span>
@@ -129,44 +132,11 @@ export const Hero: React.FC = () => {
 
             <a 
               href="#servicos" 
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-slate-950/70 hover:bg-slate-900/80 text-white font-semibold text-base border border-white/30 backdrop-blur-md shadow-2xl transition-all duration-200 cursor-pointer drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7.5 py-4 rounded-xl bg-slate-950/70 hover:bg-slate-900/80 text-white font-semibold text-[16.5px] scale-[1.03] origin-left border border-white/30 backdrop-blur-md shadow-2xl hover:scale-[1.05] transition-all duration-200 cursor-pointer drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]"
             >
               <i className="fa-solid fa-list-check text-emerald-400"></i>
               <span>Conhecer Especialidades</span>
             </a>
-          </div>
-
-          {/* Destaques Rápidos com Glassmorphism translúcido */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-6 border-t border-white/20 max-w-xl text-left">
-            <div className="flex items-center gap-3 p-3 rounded-2xl bg-slate-950/65 border border-white/20 backdrop-blur-md shadow-lg drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/25 text-emerald-300 flex items-center justify-center font-bold shrink-0">
-                <i className="fa-solid fa-calendar-check"></i>
-              </div>
-              <div>
-                <p className="text-[11px] text-slate-300 font-medium leading-none">Horários</p>
-                <p className="text-sm font-bold text-white mt-1">A combinar</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 p-3 rounded-2xl bg-slate-950/65 border border-white/20 backdrop-blur-md shadow-lg drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/25 text-emerald-300 flex items-center justify-center font-bold shrink-0">
-                <i className="fa-solid fa-file-signature"></i>
-              </div>
-              <div>
-                <p className="text-[11px] text-slate-300 font-medium leading-none">Segurança</p>
-                <p className="text-sm font-bold text-white mt-1">Planos com Contrato</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 p-3 rounded-2xl bg-slate-950/65 border border-white/20 backdrop-blur-md shadow-lg drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] col-span-2 sm:col-span-1">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/25 text-emerald-300 flex items-center justify-center font-bold shrink-0">
-                <i className="fa-solid fa-phone"></i>
-              </div>
-              <div>
-                <p className="text-[11px] text-slate-300 font-medium leading-none">Contato</p>
-                <p className="text-sm font-bold text-white mt-1">{PHONE_DISPLAY}</p>
-              </div>
-            </div>
           </div>
 
           {/* Controles discretos de reprodução e áudio */}
