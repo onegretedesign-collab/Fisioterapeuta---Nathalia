@@ -35,7 +35,7 @@ export const doctorProfileData: DoctorProfileData = {
     {
       icon: "fa-solid fa-heart-pulse",
       title: "Atendimento Humanizado",
-      description: "Tempo exclusivo dedicado a escutar sua queixa e entender sua rotina sem pressa."
+      description: "Tempo exclusivo dedicado a escutar sua queixa e entender sua necessidade de perto."
     },
     {
       icon: "fa-solid fa-microscope",
@@ -45,7 +45,7 @@ export const doctorProfileData: DoctorProfileData = {
     {
       icon: "fa-solid fa-spa",
       title: "Visão Integrativa do Corpo",
-      description: "Combinação precisa de cinesioterapia, terapia manual, Dry Needling e auriculoterapia."
+      description: "Combinação de técnicas, cinesioterapia e eletroterapia, para um resultado mais eficiente."
     },
     {
       icon: "fa-solid fa-house-medical",

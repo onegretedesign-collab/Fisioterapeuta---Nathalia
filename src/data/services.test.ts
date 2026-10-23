@@ -9,12 +9,12 @@ test('servicesData contains all 6 required clinical services', () => {
   assert.equal(servicesData.length, 6);
   const ids = servicesData.map(s => s.id);
   assert.deepEqual(ids, [
-    'pos-cirurgico',
-    'acidente-trabalho',
-    'massagem',
-    'auriculoterapia',
-    'dry-needling',
-    'terapias-integrativas'
+    'traumato-ortopedica',
+    'neurofuncional',
+    'respiratoria-pulmonar',
+    'esportiva',
+    'gerontologia',
+    'fisioterapia-domiciliar'
   ]);
 });
 

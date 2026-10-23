@@ -115,7 +115,7 @@ export const Hero: React.FC = () => {
 
           {/* Descrição com contraste protegido por drop-shadow */}
           <p className="text-base sm:text-lg text-white max-w-2xl leading-relaxed font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
-            Tratamentos especializados focados na sua recuperação completa. Do pós-cirúrgico e acidentes de trabalho a técnicas integrativas como Dry Needling e Auriculoterapia.
+            Tratamentos especializados, focados na sua recuperação completa.
           </p>
 
           {/* CTAs descidos abaixo com tamanho aumentado em 3% */}

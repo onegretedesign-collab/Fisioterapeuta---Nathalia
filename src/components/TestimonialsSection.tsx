@@ -206,7 +206,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
             </div>
             <h3 className="text-2xl font-bold">Pronto para dar o primeiro passo rumo a uma vida sem dor?</h3>
             <p className="text-slate-300 text-sm max-w-2xl leading-relaxed">
-              Junte-se a centenas de pacientes que recuperaram a mobilidade e o bem-estar com atendimento personalizado, presencial ou no conforto da sua casa.
+              Junte-se a centenas de pacientes que recuperaram a mobilidade e o bem-estar com atendimento personalizado, presencial e no conforto da sua casa.
             </p>
           </div>
 
