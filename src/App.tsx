@@ -9,6 +9,7 @@ import { PlansSection } from './components/PlansSection.tsx';
 import { ContractModal } from './components/ContractModal.tsx';
 import { FirstVisitModal } from './components/FirstVisitModal.tsx';
 import { DoctorFichaModal } from './components/DoctorFichaModal.tsx';
+import { ScheduleDashboardModal } from './components/ScheduleDashboardModal.tsx';
 import { FaqSection } from './components/FaqSection.tsx';
 import { Footer } from './components/Footer.tsx';
 import { ServiceItem, createWhatsAppUrl } from './data/services.ts';
@@ -19,10 +20,11 @@ export default function App() {
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
   const [isContractModalOpen, setIsContractModalOpen] = useState(false);
   const [isFirstVisitModalOpen, setIsFirstVisitModalOpen] = useState(false);
+  const [isScheduleDashboardOpen, setIsScheduleDashboardOpen] = useState(false);
   const [firstVisitPlanId, setFirstVisitPlanId] = useState<string | undefined>(undefined);
   const [doctorFichaSubmission, setDoctorFichaSubmission] = useState<FirstVisitSubmission | null>(null);
 
-  // Detect ?ficha= in URL for Nathalia's direct access
+  // Detect ?ficha= or ?agenda= in URL for direct access
   useEffect(() => {
     try {
       const params = new URLSearchParams(window.location.search);
@@ -33,8 +35,11 @@ export default function App() {
           setDoctorFichaSubmission(decoded);
         }
       }
+      if (params.get('agenda') === 'true' || params.get('painel') === 'true') {
+        setIsScheduleDashboardOpen(true);
+      }
     } catch (e) {
-      console.error('Erro ao ler parâmetro ficha da URL:', e);
+      console.error('Erro ao ler parâmetros da URL:', e);
     }
   }, []);
 
@@ -49,8 +54,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased font-sans">
-      {/* Header / Navbar */}
-      <Header />
+      {/* Header / Navbar com botão Agenda Nathalia */}
+      <Header onOpenScheduleDashboard={() => setIsScheduleDashboardOpen(true)} />
 
       {/* Main Content Sections */}
       <main className="flex-1">
@@ -79,6 +84,12 @@ export default function App() {
         <i className="fa-brands fa-whatsapp text-3xl"></i>
       </a>
 
+      {/* Schedule & Appointments Dashboard Modal (Exclusivo Nathalia) */}
+      <ScheduleDashboardModal
+        isOpen={isScheduleDashboardOpen}
+        onClose={() => setIsScheduleDashboardOpen(false)}
+      />
+
       {/* Service Detail Modal */}
       <ServiceModal
         service={selectedService}
@@ -104,7 +115,6 @@ export default function App() {
         submission={doctorFichaSubmission}
         onClose={() => {
           setDoctorFichaSubmission(null);
-          // Clean URL param without page reload
           if (window.location.search.includes('ficha=')) {
             window.history.replaceState({}, '', window.location.pathname);
           }

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "apt_seed_1",
+    "patientName": "Maria Aparecida Silva",
+    "phone": "64998881234",
+    "date": "2026-10-24",
+    "time": "09:00",
+    "specialty": "Traumato-Ortopédica",
+    "serviceType": "Consultório",
+    "notes": "Pós-operatório de menisco do joelho direito (3ª semana). Foco em ganho de flexão.",
+    "status": "confirmado",
+    "createdAt": "2026-10-24T08:00:00.000Z",
+    "updatedAt": "2026-10-24T08:00:00.000Z"
+  },
+  {
+    "id": "apt_seed_2",
+    "patientName": "Carlos Eduardo Mendonça",
+    "phone": "64992334455",
+    "date": "2026-10-24",
+    "time": "14:30",
+    "specialty": "Respiratória / Pulmonar",
+    "serviceType": "Domiciliar (Home Care)",
+    "notes": "Higiene brônquica e reexpansão pulmonar pós-infecção.",
+    "status": "agendado",
+    "createdAt": "2026-10-24T08:30:00.000Z",
+    "updatedAt": "2026-10-24T08:30:00.000Z"
+  },
+  {
+    "id": "apt_seed_3",
+    "patientName": "Dona Sebastiana Ferreira",
+    "phone": "64996112233",
+    "date": "2026-10-25",
+    "time": "10:00",
+    "specialty": "Gerontologia",
+    "serviceType": "Consultório",
+    "notes": "Treinamento de equilíbrio unipodal e fortalecimento de membros inferiores.",
+    "status": "agendado",
+    "createdAt": "2026-10-24T09:00:00.000Z",
+    "updatedAt": "2026-10-24T09:00:00.000Z"
+  },
+  {
+    "id": "apt_1792874224294_eaqw2",
+    "patientName": "Juliana Costa",
+    "phone": "64998877665",
+    "date": "2026-10-24",
+    "time": "11:00",
+    "specialty": "Neurofuncional (Neurologia)",
+    "serviceType": "Consultório",
+    "notes": "",
+    "status": "agendado",
+    "createdAt": "2026-10-24T20:37:04.294Z",
+    "updatedAt": "2026-10-24T20:37:04.294Z"
+  }
+]
